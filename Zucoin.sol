@@ -11,12 +11,12 @@ import "./ERC20Detailed.sol";
  * Note they can later distribute these tokens as they wish using `transfer` and other
  * `ERC20` functions.
  */
-contract Token is ERC20, ERC20Detailed {
+contract Token is Zucoin, ERC20Detailed {
 
     /**
      * @dev Constructor that gives msg.sender all of existing tokens.
      */
-    constructor () public ERC20Detailed("YourTokenName", "YTN", 18) {
-        _mint(msg.sender, 10000000000 * (10 ** uint256(decimals())));
+    constructor () public ERC20Detailed("Zucoin", "ZUC", 18) {
+        _mint(msg.sender, 10000000000000 * (10 ** uint256(decimals())));
     }
 }
